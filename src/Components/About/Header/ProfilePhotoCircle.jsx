@@ -38,7 +38,7 @@ const ProfilePhotoCircle = ({ image, circlePath, onClick }) => {
 	return (
 		<motion.button
 			onClick={() => onClick(image)}
-			className="w-24 h-24 rounded-lg border border-violet-500 absolute top-0 left-0 shadow-lg overflow-hidden z-20"
+			className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-lg border border-violet-500 absolute top-0 left-0 shadow-lg overflow-hidden z-20"
 			style={{
 				offsetPath: `path("${circlePath}")`,
 				offsetDistance: `${offset}%`,

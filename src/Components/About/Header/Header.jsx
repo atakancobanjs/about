@@ -38,8 +38,8 @@ const Header = () => {
 
 	return (
 		<div className="w-full h-full flex items-center justify-center p-3 gap-5 max-lg:flex-col">
-			<div className="flex items-center justify-center max-lg:w-full m-5">
-				<div className="flex flex-col items-center justify-center relative max-lg:w-full w-[350px] h-[350px]">
+			<div className="flex items-center justify-center max-lg:w-full">
+				<div className="flex flex-col items-center justify-center relative max-lg:w-screen w-[350px] h-[350px] max-lg:scale-75">
 					<svg xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 350 350" className="absolute z-10">
 						<motion.path
 							d="M 175 25 A 150 150 0 1 1 174.9 25"
