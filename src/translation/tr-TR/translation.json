@@ -1,0 +1,69 @@
+{
+	"hi": "Merhabalar!",
+	"iam": "Ben Atakan",
+	"navbar": {
+		"list": {
+			"home": "Ana Sayfa",
+			"about": "Hakkımda",
+			"contact": "İletişim",
+			"faq": "Becerilerim",
+			"projects": "Projelerim"
+		}
+	},
+	"me": {
+		"title": "Merhaba, ben Atakan",
+		"about": "'Full-stack web' geliştiricisiyim",
+		"details": "Sakarya, Türkiye'de yaşıyorum",
+		"buttons": {
+			"contact": "Benimle İletişime Geç",
+			"more": "Hakkımda"
+		}
+	},
+	"about": {
+		"title": "Merhaba!",
+		"paragraph": "Merhaba! Ben Atakan, teknoloji ve yazılım dünyasına büyük bir tutkuyla bağlı bir geliştiriciyim. Özellikle mobil uygulama ve web geliştirme alanlarında çalışıyorum. Yeni teknolojiler öğrenmek ve projelerimi sürekli olarak geliştirmek benim için vazgeçilmez bir hedef.",
+		"projects": {
+			"title": "Çalışmalarım",
+			"loading": "Yükleniyor...",
+			"noDescription": "Açıklama yok",
+			"noLicense": "Lisans yok"
+		}
+	},
+	"contact": {
+		"title": "Benimle İletişime Geçin",
+		"description": "Herhangi bir sorunuz, proje teklifi veya işbirliği öneriniz varsa, bana ulaşmaktan çekinmeyin. Size en kısa sürede geri dönüş yapacağım."
+	},
+	"footer": {
+		"developer": "© 2026-<strong>Atakan Çoban</strong> tarafından inşaa edildi. Tüm hakları saklıdır",
+		"description": "Bu sitede bulunan unsurların tamamı <strong> MIT </strong> lisansı ile korunmaktadır."
+	},
+	"skills": {
+		"title": "Yeteneklerim",
+		"position": {
+			"title": "Mevcut pozisyonum",
+			"description": "Şu anda mevcut bir projede yer almıyorum :)"
+		}
+	},
+	"notfound": {
+		"description": "Sayfa Bulunamadı: {{ url }}",
+		"button": "Geri Dön"
+	},
+	"projects": {
+		"title": "My Projects",
+		"about": {
+			"title": "Kişisel Hakkımda Sayfası",
+			"description": "Yeteneklerimi ve projelerimi sergilemek için React.js ve Tailwind CSS ile oluşturulmuş kişisel bir hakkımda sayfası.",
+			"date": "5 Ekim 2024"
+		},
+		"weather": {
+			"title": "Hava Durumu Uygulaması",
+			"description": "OpenWeatherMap API'sini kullanan basit bir hava durumu uygulaması. Kullanıcıların şehir ve konum bazında hava durumu bilgilerini görüntülemelerini sağlar.",
+			"date": "11 Kasım 2024"
+		},
+		"todo": {
+			"title": "Yapılacaklar Listesi Uygulaması",
+			"description": "Basit ve kullanıcı dostu bir yapılacaklar listesi uygulaması. Kullanıcıların görev ekleyip yönetmelerine olanak tanır.",
+			"date": "13 Kasım 2024"
+		}
+	}
+}

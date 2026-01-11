@@ -1,0 +1,69 @@
+{
+	"hi": "Hi There!",
+	"iam": "I'am Atakan",
+	"navbar": {
+		"list": {
+			"home": "Home",
+			"about": "About",
+			"contact": "Contact",
+			"faq": "Skills",
+			"projects": "Projects"
+		}
+	},
+	"me": {
+		"title": "Hi, I'am Atakan",
+		"about": "'Full-stack web' developer",
+		"details": "based in Sakarya, Türkiye",
+		"buttons": {
+			"more": "Read More",
+			"contact": "Contact With Me"
+		}
+	},
+	"about": {
+		"title": "Hi!",
+		"paragraph": "Hello! I'm Atakan, a developer with a strong passion for technology and software development. My expertise lies in mobile app and web development. I'm constantly driven to learn new technologies and improve my projects.",
+		"projects": {
+			"title": "My Product",
+			"loading": "Loading...",
+			"noDescription": "No description",
+			"noLicense": "No License"
+		}
+	},
+	"contact": {
+		"title": "Contact me",
+		"description": "If you have any questions, project proposals, or collaboration ideas, feel free to reach out. I’ll get back to you as soon as possible."
+	},
+	"footer": {
+		"developer": "© 2026-present <strong>Atakan Çoban.</strong> All rights reserved.",
+		"description": "Everything on this site is protected by the <strong> MIT </strong> license."
+	},
+	"skills": {
+		"title": "Skills",
+		"position": {
+			"title": "My current position",
+			"description": "I'am not working any position right now :)"
+		}
+	},
+	"notfound": {
+		"description": "Page Not Found: {{ url }}",
+		"button": "Go Back"
+	},
+	"projects": {
+		"title": "My Projects",
+		"about": {
+			"title": "Personal About Page",
+			"description": "A personal about page built with React.js and Tailwind CSS to showcase my skills and projects.",
+			"date": "Oct 5, 2024"
+		},
+		"weather": {
+			"title": "Weather Application",
+			"description": "A simple weather application that uses the OpenWeatherMap API. It allows users to view weather information based on city and location.",
+			"date": "Nov 11, 2024"
+		},
+		"todo": {
+			"title": "To-Do List Application",
+			"description": "A simple and user-friendly to-do list application. It allows users to add and manage tasks.",
+			"date": "Nov 13, 2024"
+		}
+	}
+}
