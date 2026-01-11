@@ -19,7 +19,7 @@ const Slider = () => {
 	useEffect(() => {
 		const FetchDataFromGithub = async () => {
 			setLoad(true);
-			const Data = await axios.get("https://api.github.com/users/Lurff/repos");
+			const Data = await axios.get("https://api.github.com/users/atakancobanjs/repos");
 			return Data.data;
 		};
 
