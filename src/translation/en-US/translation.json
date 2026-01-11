@@ -50,6 +50,7 @@
 	},
 	"projects": {
 		"title": "My Projects",
+		"description": "Below you can find some of the projects I have developed, projects are always updated. Click/tap on the cards for more information.",
 		"about": {
 			"title": "Personal About Page",
 			"description": "A personal about page built with React.js and Tailwind CSS to showcase my skills and projects.",
@@ -64,6 +65,20 @@
 			"title": "To-Do List Application",
 			"description": "A simple and user-friendly to-do list application. It allows users to add and manage tasks.",
 			"date": "Nov 13, 2024"
+		}
+	},
+	"developingProjects": {
+		"title": "Developing Projects",
+		"description": "Projects I am currently working on. Click/tap on the cards for more information.",
+		"chatApp": {
+			"title": "Real-time Chat Application",
+			"description": "A chat application that enables users to message in real time. It is being developed using WebSocket technology. You can follow its development by contacting me or through the updates I will post here.",
+			"date": "End Of 2026"
+		},
+		"blogApp": {
+			"title": "Personal Blog Application",
+			"description": "A blog application that enables users to create and share blog posts. It is being developed with a user-friendly interface and rich text editing features. You can follow the developments by contacting me or through the updates I will make here.",
+			"date": "Soon"
 		}
 	}
 }

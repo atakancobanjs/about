@@ -7,10 +7,21 @@ const Footer = () => {
 			<div className="w-3/4 p-3 border-t border-[#555] gap-5 flex">
 				<div className="w-full flex items-center flex-col justify-center gap-2">
 					<div className="text-gray-400 text-lg max-md:text-sm max-lg:text-center">
-						<Trans i18nKey="footer.developer" />
+						<Trans
+							components={{
+								strong: <strong className="underline decoration-violet-500 decoration-2" />,
+							}}
+							i18nKey="footer.developer"
+						/>
 					</div>
 					<div className="text-gray-400 text-lg gap-2 max-md:text-sm max-lg:text-center">
-						<Trans className="nowrap" i18nKey="footer.description" />
+						<Trans
+							components={{
+								strong: <strong className="underline decoration-pink-500 decoration-2" />,
+							}}
+							className="nowrap"
+							i18nKey="footer.description"
+						/>
 					</div>
 				</div>
 			</div>

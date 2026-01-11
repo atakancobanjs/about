@@ -17,8 +17,8 @@ const Contact = () => {
 		{
 			icon: <BiLogoGithub size={35} />,
 			label: "Github",
-			href: "https://github.com/Lurff",
-			username: "@Lurff",
+			href: "https://github.com/atakancobanjs",
+			username: "@atakancobanjs",
 		},
 		{
 			icon: <BiLogoInstagram size={35} />,

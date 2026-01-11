@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+	cursor: none !important;
+}
+
+/* Link, button ve interaktif elementler */
+a,
+button,
+input,
+textarea,
+select {
+	cursor: none !important;
+}
+
+/* Hover durumları */
+a:hover,
+button:hover {
+	cursor: none !important;
+}
