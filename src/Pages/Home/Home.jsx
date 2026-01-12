@@ -59,7 +59,7 @@ const Home = () => {
 	);
 
 	return (
-		<div className="w-screen h-screen relative flex justify-between flex-col">
+		<div className="w-screen h-screen relative flex justify-between flex-col ">
 			{/* FULL PAGE BACKGROUND ANIMATIONS */}
 			<div className="absolute inset-0 overflow-hidden pointer-events-none">
 				{/* Floating Particles - TÜM SAYFA */}
@@ -144,15 +144,15 @@ const Home = () => {
 			</div>
 			<Navbar />
 			{/* Main Content */}
-			<div className="flex items-center justify-evenly p-5 w-full h-3/4 max-lg:flex-col-reverse relative z-10">
+			<div className="flex items-center justify-evenly p-5 w-full h-3/4 max-lg:p-0 max-lg:flex-col-reverse relative z-10">
 				{/* Left Side - Text Content */}
-				<div className="flex flex-col items-center justify-center gap-5 w-full">
-					<span className="text-gray-300 text-4xl font-medium max-md:text-2xl">{t("me.title")}</span>
-					<span className="text-gray-300 text-5xl font-bold max-xl:text-3xl max-md:text-xl max-md:text-nowrap">
+				<div className="flex flex-col items-center justify-center gap-5 w-full max-lg:gap-2">
+					<span className="text-gray-300 text-4xl font-medium max-md:text-2xl w-full text-center max-lg:text-wrap">{t("me.title")}</span>
+					<span className="text-gray-300 text-5xl max-lg:text-wrap text-center w-full font-bold max-xl:text-3xl max-md:text-xl max-lg:gap-2">
 						<TypeAnimation sequence={[t("me.about"), 1000]} wrapper="span" cursor={true} repeat={Infinity} />
 					</span>
 					<span className="p-2 text-gray-300 text-xl font-medium text-center">{t("me.details")}</span>
-					<div className="w-full flex items-center gap-5 justify-center">
+					<div className="w-full flex items-center gap-5 justify-center max-lg:flex-col-reverse max-lg:gap-3">
 						<div className="relative flex items-center justify-center">
 							<button
 								onClick={() => navigate("/about")}
@@ -172,7 +172,7 @@ const Home = () => {
 				</div>
 
 				{/* Right Side - Image */}
-				<div className="flex items-center justify-center w-2/3 relative">
+				<div className="flex items-center justify-center w-2/3 relative  max-lg:scale-75">
 					<div className="flex flex-col items-center justify-center w-full relative z-10">
 						<motion.div
 							className="w-64 h-64 bg-gradient-to-br  rounded-lg z-10 shadow-2xl flex items-center justify-center"
