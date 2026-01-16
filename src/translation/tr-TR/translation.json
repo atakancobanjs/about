@@ -20,18 +20,47 @@
 		}
 	},
 	"about": {
-		"title": "Merhaba!",
-		"paragraph": "Merhaba! Ben Atakan, teknoloji ve yazılım dünyasına büyük bir tutkuyla bağlı bir geliştiriciyim. Özellikle mobil uygulama ve web geliştirme alanlarında çalışıyorum. Yeni teknolojiler öğrenmek ve projelerimi sürekli olarak geliştirmek benim için vazgeçilmez bir hedef.",
+		"hero": {
+			"title": "Merhaba!",
+			"description": "Merhaba! Ben Atakan, teknoloji ve yazılım geliştirmeye tutkuyla bağlı bir geliştiriciyim. Uzmanlık alanım mobil uygulama ve web geliştirmedir. Sürekli olarak yeni teknolojiler öğrenmeye ve projelerimi geliştirmeye odaklanıyorum."
+		},
 		"projects": {
-			"title": "Çalışmalarım",
-			"loading": "Yükleniyor...",
-			"noDescription": "Açıklama yok",
-			"noLicense": "Lisans yok"
+			"title": "Projelerim",
+			"noDescription": "Açıklama bulunmamaktadır",
+			"noLicense": "Lisans yok",
+			"daysAgo": "gün önce",
+			"monthsAgo": "ay önce",
+			"yearsAgo": "yıl önce",
+			"updated": "Güncellendi:",
+			"selectLanguage": "Dil Seç",
+			"selectSort": "Sıralama Seç",
+			"allLanguages": "Tüm Diller",
+			"sortByStars": "Yıldıza Göre",
+			"sortByForks": "Fork'a Göre",
+			"sortByUpdated": "Güncellenmeye Göre",
+			"totalRepos": "Toplam Repo",
+			"totalStars": "Toplam Yıldız",
+			"totalForks": "Toplam Fork",
+			"languages": "Dil"
 		}
 	},
 	"contact": {
 		"title": "Benimle İletişime Geçin",
-		"description": "Herhangi bir sorunuz, proje teklifi veya işbirliği öneriniz varsa, bana ulaşmaktan çekinmeyin. Size en kısa sürede geri dönüş yapacağım."
+		"description": "Herhangi bir sorunuz, proje teklifi veya işbirliği öneriniz varsa, bana ulaşmaktan çekinmeyin. Size en kısa sürede geri dönüş yapacağım.",
+		"responseTime": "Genellikle 24 saat içinde yanıt veririm",
+		"form": {
+			"title": "Hızlı Mesaj Gönder",
+			"subtitle": "Formu doldurarak direkt benimle iletişime geçin",
+			"name": "İsim",
+			"namePlaceholder": "Adınız Soyadınız",
+			"email": "E-posta",
+			"emailPlaceholder": "ornek@email.com",
+			"message": "Mesaj",
+			"messagePlaceholder": "Mesajınızı buraya yazın...",
+			"send": "Mesajı Gönder",
+			"success": "Mesajınız Gönderildi!",
+			"successMessage": "Mesajınız için teşekkür ederim. En kısa sürede size geri dönüş yapacağım."
+		}
 	},
 	"footer": {
 		"developer": "© 2026-<strong>Atakan Çoban</strong> tarafından inşaa edildi. Tüm hakları saklıdır",
@@ -39,9 +68,24 @@
 	},
 	"skills": {
 		"title": "Yeteneklerim",
+		"subtitle": "Sürekli öğrenen bir geliştiriciyim ve teknoloji yığınım her geçen gün büyüyor",
+		"categories": {
+			"all": "Tümü",
+			"language": "Diller",
+			"frontend": "Frontend",
+			"backend": "Backend",
+			"framework": "Framework",
+			"tools": "Araçlar"
+		},
+		"stats": {
+			"technologies": "Teknoloji",
+			"experience": "Yıl Deneyim",
+			"projects": "Proje",
+			"expert": "Expert Seviye"
+		},
 		"position": {
 			"title": "Mevcut pozisyonum",
-			"description": "Şu anda mevcut bir projede yer almıyorum :)"
+			"description": "Şu anda mevcut bir projede yer almıyorum."
 		}
 	},
 	"notfound": {

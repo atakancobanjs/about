@@ -20,28 +20,72 @@
 		}
 	},
 	"about": {
-		"title": "Hi!",
-		"paragraph": "Hello! I'm Atakan, a developer with a strong passion for technology and software development. My expertise lies in mobile app and web development. I'm constantly driven to learn new technologies and improve my projects.",
+		"hero": {
+			"title": "Hi!",
+			"description": "Hello! I'm Atakan, a developer with a strong passion for technology and software development. My expertise lies in mobile app and web development. I'm constantly driven to learn new technologies and improve my projects."
+		},
 		"projects": {
-			"title": "My Product",
-			"loading": "Loading...",
-			"noDescription": "No description",
-			"noLicense": "No License"
+			"title": "My Projects",
+			"noDescription": "No description available",
+			"noLicense": "No license",
+			"daysAgo": "days ago",
+			"monthsAgo": "months ago",
+			"yearsAgo": "years ago",
+			"updated": "Updated:",
+			"selectLanguage": "Select Language",
+			"selectSort": "Select Sort",
+			"allLanguages": "All Languages",
+			"sortByStars": "Sort by Stars",
+			"sortByForks": "Sort by Forks",
+			"sortByUpdated": "Sort by Updated",
+			"totalRepos": "Total Repos",
+			"totalStars": "Total Stars",
+			"totalForks": "Total Forks",
+			"languages": "Languages"
 		}
 	},
 	"contact": {
-		"title": "Contact me",
-		"description": "If you have any questions, project proposals, or collaboration ideas, feel free to reach out. I’ll get back to you as soon as possible."
+		"title": "Get In Touch",
+		"description": "If you have any questions, project proposals or collaboration suggestions, feel free to reach out. I'll get back to you as soon as possible.",
+		"responseTime": "Usually responds within 24 hours",
+		"form": {
+			"title": "Send Quick Message",
+			"subtitle": "Fill out the form to get in touch with me directly",
+			"name": "Name",
+			"namePlaceholder": "Your Full Name",
+			"email": "Email",
+			"emailPlaceholder": "example@email.com",
+			"message": "Message",
+			"messagePlaceholder": "Write your message here...",
+			"send": "Send Message",
+			"success": "Message Sent!",
+			"successMessage": "Thank you for your message. I'll get back to you as soon as possible."
+		}
 	},
 	"footer": {
 		"developer": "© 2026-present <strong>Atakan Çoban.</strong> All rights reserved.",
 		"description": "Everything on this site is protected by the <strong> MIT </strong> license."
 	},
 	"skills": {
-		"title": "Skills",
+		"title": "My Skills",
+		"subtitle": "I'm a lifelong learner and my technology stack grows every day",
+		"categories": {
+			"all": "All",
+			"language": "Languages",
+			"frontend": "Frontend",
+			"backend": "Backend",
+			"framework": "Frameworks",
+			"tools": "Tools"
+		},
+		"stats": {
+			"technologies": "Technologies",
+			"experience": "Years Experience",
+			"projects": "Projects",
+			"expert": "Expert Level"
+		},
 		"position": {
-			"title": "My current position",
-			"description": "I'am not working any position right now :)"
+			"title": "Current position",
+			"description": "Currently not working on any project"
 		}
 	},
 	"notfound": {

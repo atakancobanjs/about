@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^6.1.0",
+    "@emailjs/browser": "^4.4.1",
     "antd": "^5.20.3",
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.7",
