@@ -94,35 +94,40 @@
 	},
 	"projects": {
 		"title": "My Projects",
-		"description": "Below you can find some of the projects I have developed, projects are always updated. Click/tap on the cards for more information.",
+		"description": "A personal about page built with React.js and Tailwind CSS to showcase my skills and projects.",
+		"liveProjects": "Live Projects",
+		"liveProjectsSubtitle": "Currently active and deployed projects",
+		"statusLive": "Live",
+		"statusDeveloping": "In Development",
+		"progress": "Progress",
 		"about": {
 			"title": "Personal About Page",
 			"description": "A personal about page built with React.js and Tailwind CSS to showcase my skills and projects.",
-			"date": "Oct 5, 2024"
+			"date": "October 5, 2024"
 		},
 		"weather": {
-			"title": "Weather Application",
-			"description": "A simple weather application that uses the OpenWeatherMap API. It allows users to view weather information based on city and location.",
-			"date": "Nov 11, 2024"
+			"title": "Weather App",
+			"description": "A simple weather app using OpenWeatherMap API. Allows users to view weather information based on city and location.",
+			"date": "November 11, 2024"
 		},
 		"todo": {
-			"title": "To-Do List Application",
-			"description": "A simple and user-friendly to-do list application. It allows users to add and manage tasks.",
-			"date": "Nov 13, 2024"
+			"title": "Todo List App",
+			"description": "A simple and user-friendly todo list application. Allows users to add and manage tasks.",
+			"date": "November 13, 2024"
 		}
 	},
 	"developingProjects": {
-		"title": "Developing Projects",
-		"description": "Projects I am currently working on. Click/tap on the cards for more information.",
+		"title": "In Development",
+		"description": "Projects I'm currently working on. Click/tap the cards for more information.",
 		"chatApp": {
-			"title": "Real-time Chat Application",
-			"description": "A chat application that enables users to message in real time. It is being developed using WebSocket technology. You can follow its development by contacting me or through the updates I will post here.",
-			"date": "End Of 2026"
+			"title": "Real-Time Chat Application",
+			"description": "A chat application that enables users to message in real-time. Being developed using WebSocket technology, you can follow the progress by contacting me or following updates here.",
+			"date": "End of 2026"
 		},
 		"blogApp": {
 			"title": "Personal Blog Application",
-			"description": "A blog application that enables users to create and share blog posts. It is being developed with a user-friendly interface and rich text editing features. You can follow the developments by contacting me or through the updates I will make here.",
-			"date": "Soon"
+			"description": "A blog application that allows users to create and share blog posts. Being developed with a user-friendly interface and rich text editing features, you can follow the progress by contacting me or following updates here.",
+			"date": "Coming Soon"
 		}
 	}
 }

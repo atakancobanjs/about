@@ -94,10 +94,15 @@
 	},
 	"projects": {
 		"title": "Projelerim",
-		"description": "Aşağıda geliştirdiğim bazı projeleri bulabilirsiniz, projeler daima güncellenir. Daha fazla bilgi için kartlara tıklayın/dokunun.",
+		"description": "Yeteneklerim ve projelerimi sergilemek için React.js ve Tailwind CSS ile oluşturulmuş kişisel bir hakkımda sayfası.",
+		"liveProjects": "Canlı Projeler",
+		"liveProjectsSubtitle": "Aktif olarak kullanımda olan projeler",
+		"statusLive": "Canlı",
+		"statusDeveloping": "Geliştiriliyor",
+		"progress": "İlerleme",
 		"about": {
 			"title": "Kişisel Hakkımda Sayfası",
-			"description": "Yeteneklerimi ve projelerimi sergilemek için React.js ve Tailwind CSS ile oluşturulmuş kişisel bir hakkımda sayfası.",
+			"description": "Yeteneklerim ve projelerimi sergilemek için React.js ve Tailwind CSS ile oluşturulmuş kişisel bir hakkımda sayfası.",
 			"date": "5 Ekim 2024"
 		},
 		"weather": {
@@ -112,16 +117,16 @@
 		}
 	},
 	"developingProjects": {
-		"title": "Geliştirilmekte Olan Projeler",
+		"title": "Geliştiriliyor",
 		"description": "Şu anda üzerinde çalıştığım projeler. Daha fazla bilgi almak için kartlara tıklayın/dokunun.",
 		"chatApp": {
 			"title": "Gerçek Zamanlı Sohbet Uygulaması",
-			"description": "Kullanıcıların gerçek zamanlı olarak mesajlaşmalarını sağlayan bir sohbet uygulaması. WebSocket teknolojisi kullanılarak geliştiriliyor, gelişmeleri bana ulaşarak veya buradaki yapacağım güncellemelerden takip edebilirsin.",
+			"description": "Kullanıcıların gerçek zamanlı olarak mesajlaşmalarını sağlayan bir sohbet uygulaması. WebSocket teknolojisi kullanılarak geliştirilıyor, gelişmeleri bana ulaşarak veya buradaki yapacağım güncellemeleri takip edebilirsiniz.",
 			"date": "2026 Sonu"
 		},
 		"blogApp": {
 			"title": "Kişisel Blog Uygulaması",
-			"description": "Kullanıcıların blog yazıları oluşturup paylaşmalarını sağlayan bir blog uygulaması. Kullanıcı dostu bir arayüz ve zengin metin düzenleme özellikleri ile geliştiriliyor, gelişmeleri bana ulaşarak veya buradaki yapacağım güncellemelerden takip edebilirsin.",
+			"description": "Kullanıcıların blog yazıları oluşturup paylaşmalarını sağlayan bir blog uygulaması. Kullanıcı dostu bir arayüz ve zengin metin düzenleme özellikleri ile geliştiriliyor, gelişmeleri bana ulaşarak veya buradaki yapacağım güncellemeleri takip edebilirsiniz.",
 			"date": "Yakında"
 		}
 	}
