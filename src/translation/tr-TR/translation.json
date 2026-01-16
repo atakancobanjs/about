@@ -1,6 +1,10 @@
 {
 	"hi": "Merhabalar!",
-	"iam": "Ben Atakan",
+	"home": {
+		"subtitle": "Portfolyoma Hoş Geldiniz",
+		"loading": "Yükleniyor...",
+		"welcome": "Hoş Geldiniz"
+	},
 	"navbar": {
 		"list": {
 			"home": "Ana Sayfa",

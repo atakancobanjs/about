@@ -1,6 +1,10 @@
 {
-	"hi": "Hi There!",
-	"iam": "I'am Atakan",
+	"hi": "Hello!",
+	"home": {
+		"subtitle": "Welcome to My Portfolio",
+		"loading": "Loading...",
+		"welcome": "Welcome"
+	},
 	"navbar": {
 		"list": {
 			"home": "Home",
