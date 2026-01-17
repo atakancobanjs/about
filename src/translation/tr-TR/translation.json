@@ -118,6 +118,11 @@
 			"title": "Yapılacaklar Listesi Uygulaması",
 			"description": "Basit ve kullanıcı dostu bir yapılacaklar listesi uygulaması. Kullanıcıların görev ekleyip yönetmelerine olanak tanır.",
 			"date": "13 Kasım 2024"
+		},
+		"face_id": {
+			"title": "Duygu Tanıma Uygulaması",
+			"description": "Kullanıcıların yüz ifadelerini analiz ederek duygularını tanıyan bir web uygulaması.",
+			"date": "17 Ocak 2026"
 		}
 	},
 	"developingProjects": {

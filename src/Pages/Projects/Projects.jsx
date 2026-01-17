@@ -12,6 +12,7 @@ import { BsRocket, BsCodeSlash } from "react-icons/bs";
 import AboutCardPhoto from "../../Public/Card/about_page_card_photo.png";
 import WeatherCardPhoto from "../../Public/Card/weather_page_card_photo.png";
 import TodoCardPhoto from "../../Public/Card/todo_page_card_photo.png";
+import FaceidCardPhoto from "../../Public/Card/faceid_page_card_photo.png";
 
 const Projects = () => {
 	const { t } = useTranslation();
@@ -43,6 +44,15 @@ const Projects = () => {
 			hash: "https://cobantodo.netlify.app/",
 			date: t("projects.todo.date"),
 			color: "from-pink-500 to-rose-600",
+			status: "live",
+		},
+		{
+			image_url: FaceidCardPhoto,
+			title: t("projects.face_id.title"),
+			description: t("projects.face_id.description"),
+			hash: "https://acobnnfaceid.netlify.app/",
+			date: t("projects.face_id.date"),
+			color: "from-yellow-500 to-amber-600",
 			status: "live",
 		},
 	];

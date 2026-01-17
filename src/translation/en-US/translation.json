@@ -118,6 +118,11 @@
 			"title": "Todo List App",
 			"description": "A simple and user-friendly todo list application. Allows users to add and manage tasks.",
 			"date": "November 13, 2024"
+		},
+		"face_id": {
+			"title": "Emotion Recognition Application",
+			"description": "A web application that analyzes users facial expressions to recognize their emotions.",
+			"date": "17 January 2026"
 		}
 	},
 	"developingProjects": {
