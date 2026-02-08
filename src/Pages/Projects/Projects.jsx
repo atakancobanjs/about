@@ -64,6 +64,7 @@ const Projects = () => {
 			date: t("projects.mu6.date"),
 			color: "from-sky-500 to-purple-600",
 			status: "live",
+		}
 	];
 
 	const DevelopedProjects = [
