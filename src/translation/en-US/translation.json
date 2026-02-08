@@ -122,8 +122,13 @@
 		"face_id": {
 			"title": "Emotion Recognition Application",
 			"description": "A web application that analyzes users facial expressions to recognize their emotions.",
-			"date": "17 January 2026"
-		}
+			"date": "January, 17 2026"
+		},
+		"mu6": {
+	"title": "Music Player Application",
+	"description": "You can play the music you want to listen to, create playlists, and manage your lists.",
+	"date": "February 8, 2026"
+}
 	},
 	"developingProjects": {
 		"title": "In Development",
