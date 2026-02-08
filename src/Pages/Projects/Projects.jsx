@@ -24,7 +24,7 @@ const Projects = () => {
 			image_url: AboutCardPhoto,
 			title: t("projects.about.title"),
 			description: t("projects.about.description"),
-			hash: "https://about-bl2.pages.dev/projects",
+			hash: "https://about-bl2.pages.dev/",
 			date: t("projects.about.date"),
 			color: "from-violet-500 to-purple-600",
 			status: "live",
