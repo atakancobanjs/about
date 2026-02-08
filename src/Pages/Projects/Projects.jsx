@@ -13,6 +13,7 @@ import AboutCardPhoto from "../../Public/Card/about_page_card_photo.png";
 import WeatherCardPhoto from "../../Public/Card/weather_page_card_photo.png";
 import TodoCardPhoto from "../../Public/Card/todo_page_card_photo.png";
 import FaceidCardPhoto from "../../Public/Card/faceid_page_card_photo.png";
+import Mu6CardPhoto from "../../Public/Card/mu6_page_card_photo.png"
 
 const Projects = () => {
 	const { t } = useTranslation();
@@ -55,6 +56,14 @@ const Projects = () => {
 			color: "from-yellow-500 to-amber-600",
 			status: "live",
 		},
+		{
+			image_url: Mu6CardPhoto,
+			title: t("projects.mu6.title"),
+			description: t("projects.mu6.description"),
+			hash: "https://face-id.pages.dev/",
+			date: t("projects.face_id.date"),
+			color: "from-sky-500 to-purple-600",
+			status: "live",
 	];
 
 	const DevelopedProjects = [
