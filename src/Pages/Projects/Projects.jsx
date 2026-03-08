@@ -60,7 +60,7 @@ const Projects = () => {
 			image_url: Mu6CardPhoto,
 			title: t("projects.mu6.title"),
 			description: t("projects.mu6.description"),
-			hash: "https://face-id.pages.dev/",
+			hash: "https://musix-6vo.pages.dev/",
 			date: t("projects.mu6.date"),
 			color: "from-sky-500 to-purple-600",
 			status: "live",
