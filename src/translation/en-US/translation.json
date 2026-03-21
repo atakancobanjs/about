@@ -83,7 +83,8 @@
       "error": "Error",
       "errorMessage": "Something went wrong. Please try again later."
     },
-    "status": "Currently online"
+    "status": "Currently online",
+    "commit": "  // fill the form or reach out directly"
   },
   "footer": {
     "developer": "© 2026-present <strong>Atakan Çoban.</strong> All rights reserved.",
@@ -164,7 +165,8 @@
       "title": "Music Player Application",
       "description": "You can play the music you want to listen to, create playlists, and manage your lists.",
       "date": "February 8, 2026"
-    }
+    },
+    "commit": "  // fill the form or reach out directly"
   },
   "developingProjects": {
     "title": "In Development",

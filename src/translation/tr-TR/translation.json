@@ -83,7 +83,8 @@
       "error": "Hata",
       "errorMessage": "Bir şeyler yanlış gitti. Lütfen daha sonra tekrar deneyin."
     },
-    "status": "Şu anda çevrim içi"
+    "status": "Şu anda çevrim içi",
+    "commit": "  // formu doldurun veya direkt ulaşın"
   },
   "footer": {
     "developer": "© 2026-<strong>Atakan Çoban</strong> tarafından inşaa edildi. Tüm hakları saklıdır",
@@ -164,7 +165,8 @@
       "title": "Müzik Çalma Uygulaması",
       "description": "Dinlemek istediğiniz müziği oynatabilir, çalma listesi oluşturabilir ve listeleri düzenleyebilirsiniz.",
       "date": "8 Şubat 2026"
-    }
+    },
+    "commit": "  // formu doldurun veya direkt ulaşın"
   },
   "developingProjects": {
     "title": "Geliştiriliyor",

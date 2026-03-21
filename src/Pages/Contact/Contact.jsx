@@ -60,7 +60,7 @@ const JSON_CONTACT_LINES = (t) => [
     { t: "n", v: '"online"' },
     { t: "p", v: "," },
   ],
-  [{ t: "cm", v: "  // formu doldurun veya direkt ulaşın" }],
+  [{ t: "cm", v: `${t("contact.commit")}` }],
   [{ t: "p", v: "}" }],
 ];
 

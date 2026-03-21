@@ -32,6 +32,6 @@ export const makeProjectsLines = (t) => [
     { t: "n", v: "2" },
     { t: "p", v: "," },
   ],
-  [{ t: "cm", v: "  // canlı projeler ve geliştirilenler aşağıda" }],
+  [{ t: "cm", v: `${t("projects.commit")}` }],
   [{ t: "p", v: "}" }],
 ];
