@@ -1,147 +1,183 @@
 {
-	"hi": "Merhabalar!",
-	"home": {
-		"subtitle": "Portfolyoma Hoş Geldiniz",
-		"loading": "Yükleniyor...",
-		"welcome": "Hoş Geldiniz"
-	},
-	"navbar": {
-		"list": {
-			"home": "Ana Sayfa",
-			"about": "Hakkımda",
-			"contact": "İletişim",
-			"faq": "Becerilerim",
-			"projects": "Projelerim"
-		}
-	},
-	"me": {
-		"title": "Merhaba, ben Atakan",
-		"about": "'Full-stack web' geliştiricisiyim",
-		"details": "Sakarya, Türkiye'de yaşıyorum",
-		"buttons": {
-			"contact": "Benimle İletişime Geç",
-			"more": "Hakkımda"
-		}
-	},
-	"about": {
-		"hero": {
-			"title": "Merhaba!",
-			"description": "Merhaba! Ben Atakan, teknoloji ve yazılım geliştirmeye tutkuyla bağlı bir geliştiriciyim. Uzmanlık alanım mobil uygulama ve web geliştirmedir. Sürekli olarak yeni teknolojiler öğrenmeye ve projelerimi geliştirmeye odaklanıyorum."
-		},
-		"projects": {
-			"title": "Projelerim",
-			"noDescription": "Açıklama bulunmamaktadır",
-			"noLicense": "Lisans yok",
-			"daysAgo": "gün önce",
-			"monthsAgo": "ay önce",
-			"yearsAgo": "yıl önce",
-			"updated": "Güncellendi:",
-			"selectLanguage": "Dil Seç",
-			"selectSort": "Sıralama Seç",
-			"allLanguages": "Tüm Diller",
-			"sortByStars": "Yıldıza Göre",
-			"sortByForks": "Fork'a Göre",
-			"sortByUpdated": "Güncellenmeye Göre",
-			"totalRepos": "Toplam Repo",
-			"totalStars": "Toplam Yıldız",
-			"totalForks": "Toplam Fork",
-			"languages": "Dil"
-		}
-	},
-	"contact": {
-		"title": "Benimle İletişime Geçin",
-		"description": "Herhangi bir sorunuz, proje teklifi veya işbirliği öneriniz varsa, bana ulaşmaktan çekinmeyin. Size en kısa sürede geri dönüş yapacağım.",
-		"responseTime": "Genellikle 24 saat içinde yanıt veririm",
-		"form": {
-			"title": "Hızlı Mesaj Gönder",
-			"subtitle": "Formu doldurarak direkt benimle iletişime geçin",
-			"name": "İsim",
-			"namePlaceholder": "Adınız Soyadınız",
-			"email": "E-posta",
-			"emailPlaceholder": "ornek@email.com",
-			"message": "Mesaj",
-			"messagePlaceholder": "Mesajınızı buraya yazın...",
-			"send": "Mesajı Gönder",
-			"success": "Mesajınız Gönderildi!",
-			"successMessage": "Mesajınız için teşekkür ederim. En kısa sürede size geri dönüş yapacağım."
-		}
-	},
-	"footer": {
-		"developer": "© 2026-<strong>Atakan Çoban</strong> tarafından inşaa edildi. Tüm hakları saklıdır",
-		"description": "Bu sitede bulunan unsurların tamamı <strong> MIT </strong> lisansı ile korunmaktadır."
-	},
-	"skills": {
-		"title": "Yeteneklerim",
-		"subtitle": "Sürekli öğrenen bir geliştiriciyim ve teknoloji yığınım her geçen gün büyüyor",
-		"categories": {
-			"all": "Tümü",
-			"language": "Diller",
-			"frontend": "Frontend",
-			"backend": "Backend",
-			"framework": "Framework",
-			"tools": "Araçlar"
-		},
-		"stats": {
-			"technologies": "Teknoloji",
-			"experience": "Yıl Deneyim",
-			"projects": "Proje",
-			"expert": "Expert Seviye"
-		},
-		"position": {
-			"title": "Mevcut pozisyonum",
-			"description": "Şu anda mevcut bir projede yer almıyorum."
-		}
-	},
-	"notfound": {
-		"description": "Sayfa Bulunamadı: {{ url }}",
-		"button": "Geri Dön"
-	},
-	"projects": {
-		"title": "Projelerim",
-		"description": "Yeteneklerim ve projelerimi sergilemek için React.js ve Tailwind CSS ile oluşturulmuş kişisel bir hakkımda sayfası.",
-		"liveProjects": "Canlı Projeler",
-		"liveProjectsSubtitle": "Aktif olarak kullanımda olan projeler",
-		"statusLive": "Canlı",
-		"statusDeveloping": "Geliştiriliyor",
-		"progress": "İlerleme",
-		"about": {
-			"title": "Kişisel Hakkımda Sayfası",
-			"description": "Yeteneklerim ve projelerimi sergilemek için React.js ve Tailwind CSS ile oluşturulmuş kişisel bir hakkımda sayfası.",
-			"date": "5 Ekim 2024"
-		},
-		"weather": {
-			"title": "Hava Durumu Uygulaması",
-			"description": "OpenWeatherMap API'sini kullanan basit bir hava durumu uygulaması. Kullanıcıların şehir ve konum bazında hava durumu bilgilerini görüntülemelerini sağlar.",
-			"date": "11 Kasım 2024"
-		},
-		"todo": {
-			"title": "Yapılacaklar Listesi Uygulaması",
-			"description": "Basit ve kullanıcı dostu bir yapılacaklar listesi uygulaması. Kullanıcıların görev ekleyip yönetmelerine olanak tanır.",
-			"date": "13 Kasım 2024"
-		},
-		"face_id": {
-			"title": "Duygu Tanıma Uygulaması",
-			"description": "Kullanıcıların yüz ifadelerini analiz ederek duygularını tanıyan bir web uygulaması.",
-			"date": "17 Ocak 2026"
-		},
-		"mu6": {
-			"title": "Müzik Çalma Uygulaması",
-			"description": "Dinlemek istediğiniz müziği oynatabilir, çalma listesi oluşturabilir ve listeleri düzenleyebilirsiniz.",
-			"date": "8 Şubat 2026"
-		}
-	},
-	"developingProjects": {
-		"title": "Geliştiriliyor",
-		"description": "Şu anda üzerinde çalıştığım projeler. Daha fazla bilgi almak için kartlara tıklayın/dokunun.",
-		"chatApp": {
-			"title": "Gerçek Zamanlı Sohbet Uygulaması",
-			"description": "Kullanıcıların gerçek zamanlı olarak mesajlaşmalarını sağlayan bir sohbet uygulaması. WebSocket teknolojisi kullanılarak geliştirilıyor, gelişmeleri bana ulaşarak veya buradaki yapacağım güncellemeleri takip edebilirsiniz.",
-			"date": "2026 Sonu"
-		},
-		"blogApp": {
-			"title": "Kişisel Blog Uygulaması",
-			"description": "Kullanıcıların blog yazıları oluşturup paylaşmalarını sağlayan bir blog uygulaması. Kullanıcı dostu bir arayüz ve zengin metin düzenleme özellikleri ile geliştiriliyor, gelişmeleri bana ulaşarak veya buradaki yapacağım güncellemeleri takip edebilirsiniz.",
-			"date": "Yakında"
-		}
-	}
+  "hi": "Merhabalar!",
+  "home": {
+    "subtitle": "Portfolyoma Hoş Geldiniz",
+    "loading": "Yükleniyor...",
+    "welcome": "Hoş Geldiniz"
+  },
+  "navbar": {
+    "list": {
+      "home": "Ana Sayfa",
+      "about": "Hakkımda",
+      "contact": "İletişim",
+      "faq": "Becerilerim",
+      "projects": "Projelerim"
+    }
+  },
+  "me": {
+    "buttons": {
+      "contact": "Benimle İletişime Geç",
+      "more": "Hakkımda"
+    },
+    "title": "Merhaba, ben Atakan",
+    "about": "'Full-stack web' geliştiricisiyim",
+    "details": "Sakarya, Türkiye'de yaşıyorum",
+    "name": "Atakan Çoban",
+    "role": "Full-stack Developer",
+    "location": "Sakarya, Türkiye",
+    "bio": "Sakarya'da yaşayan, web ve masaüstü uygulamalar geliştiren tutkulu bir geliştirici. Temiz kod yazmaya ve kullanıcı deneyimine önem veririm.",
+    "comment": "Şu an yeni projeler arıyorum ",
+    "available": "Müsait",
+    "stats": {
+      "workHoursLabel": "Çalışma Saatlerim",
+      "workHoursValue": "Esnek, Her zaman",
+      "projectsLabel": "projeler",
+      "projectsValue": "5 Canlı",
+      "githubLabel": "Github",
+      "stackLabel": "Stack"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Merhaba!",
+      "description": "Merhaba! Ben Atakan, teknoloji ve yazılım geliştirmeye tutkuyla bağlı bir geliştiriciyim. Uzmanlık alanım mobil uygulama ve web geliştirmedir. Sürekli olarak yeni teknolojiler öğrenmeye ve projelerimi geliştirmeye odaklanıyorum."
+    },
+    "projects": {
+      "title": "Projelerim",
+      "noDescription": "Açıklama bulunmamaktadır",
+      "noLicense": "Lisans yok",
+      "daysAgo": "gün önce",
+      "monthsAgo": "ay önce",
+      "yearsAgo": "yıl önce",
+      "updated": "Güncellendi:",
+      "selectLanguage": "Dil Seç",
+      "selectSort": "Sıralama Seç",
+      "allLanguages": "Tüm Diller",
+      "sortByStars": "Yıldıza Göre",
+      "sortByForks": "Fork'a Göre",
+      "sortByUpdated": "Güncellenmeye Göre",
+      "totalRepos": "Toplam Repo",
+      "totalStars": "Toplam Yıldız",
+      "totalForks": "Toplam Fork",
+      "languages": "Dil"
+    },
+    "status": "Çalışmaya Açığım"
+  },
+  "contact": {
+    "title": "Benimle İletişime Geçin",
+    "description": "Herhangi bir sorunuz, proje teklifi veya işbirliği öneriniz varsa, bana ulaşmaktan çekinmeyin. Size en kısa sürede geri dönüş yapacağım.",
+    "responseTime": "Genellikle 24 saat içinde yanıt veririm",
+    "form": {
+      "title": "Hızlı Mesaj Gönder",
+      "subtitle": "Formu doldurarak direkt benimle iletişime geçin",
+      "name": "İsim",
+      "namePlaceholder": "Adınız Soyadınız",
+      "email": "E-posta",
+      "emailPlaceholder": "ornek@email.com",
+      "message": "Mesaj",
+      "messagePlaceholder": "Mesajınızı buraya yazın...",
+      "send": "Mesajı Gönder",
+      "sending": "Gönderiliyor...",
+      "success": "Mesajınız Gönderildi!",
+      "successMessage": "Mesajınız için teşekkür ederim. En kısa sürede size geri dönüş yapacağım.",
+      "error": "Hata",
+      "errorMessage": "Bir şeyler yanlış gitti. Lütfen daha sonra tekrar deneyin."
+    },
+    "status": "Şu anda çevrim içi"
+  },
+  "footer": {
+    "developer": "© 2026-<strong>Atakan Çoban</strong> tarafından inşaa edildi. Tüm hakları saklıdır",
+    "description": "Bu sitede bulunan unsurların tamamı <strong> MIT </strong> lisansı ile korunmaktadır."
+  },
+  "skills": {
+    "title": "Yeteneklerim",
+    "subtitle": "Sürekli öğrenen bir geliştiriciyim ve teknoloji yığınım her geçen gün büyüyor",
+    "categories": {
+      "all": "Tümü",
+      "language": "Diller",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "framework": "Framework",
+      "tools": "Araçlar"
+    },
+    "stats": {
+      "technologies": "Teknoloji",
+      "experience": "Yıl Deneyim",
+      "projects": "Proje",
+      "expert": "Expert Seviye"
+    },
+    "position": {
+      "title": "Mevcut pozisyonum",
+      "description": "Şu anda mevcut bir projede yer almıyorum."
+    },
+    "status": "Öğrenmeye Açığım",
+    "viewDocs": "Dökümantasyonu Görüntüle",
+    "description": {
+      "js": "JavaScript, web geliştirme dünyasının temel taşlarından biridir. Hem frontend hem de backend geliştirmede yaygın olarak kullanılır.",
+      "typescript": "TypeScript, JavaScript'in güçlü bir şekilde yazılmış bir üst kümesidir. Daha büyük projelerde kodun daha güvenli ve bakımı kolay olmasını sağlar.",
+      "node": "Node.js, JavaScript'i sunucu tarafında çalıştırmak için kullanılan bir platformdur. Hızlı ve ölçeklenebilir uygulamalar geliştirmek için idealdir.",
+      "html": "HTML, web sayfaları oluşturmak için standart bir işaretleme dilidir. Web belgelerinin yapısını ve içeriğini tanımlar.",
+      "css": "CSS, HTML veya XML ile yazılmış bir belgenin sunumunu tanımlamak için kullanılan bir stil sayfası dilidir. Web sayfalarının düzenini ve görsel görünümünü kontrol eder.",
+      "electron": "Electron, HTML, CSS ve JavaScript gibi web teknolojilerini kullanarak çapraz platform masaüstü uygulamaları oluşturma imkanı sunar.",
+      "tauri": "Tauri, web teknolojilerini kullanarak güvenli ve hızlı masaüstü uygulamaları oluşturma imkanı sunar.",
+      "react": "React, kullanıcı arayüzleri oluşturmak için kullanılan bir JavaScript kütüphanesidir. Geliştiricilere yeniden kullanılabilir UI bileşenleri oluşturması ve uygulama durumunu verimli bir şekilde yönetmesi için olanak sağlar.",
+      "next": "Next.js, üretim-ready web uygulamaları oluşturmak için React framework'üdür. Sunucu tarafında renderlama ve statik site üretimini etkinleştirir.",
+      "vite": "Vite, modern web projeleri için daha hızlı ve daha verimli bir derleme aracıdır.",
+      "tailwind": "Tailwind CSS, geliştiricilerin hızlı ve verimli bir şekilde özel kullanıcı arayüzleri oluşturmalarını sağlayan utility-first bir CSS framework'üdür.",
+      "mongodb": "MongoDB, esnek JSON benzeri belgelerde veri saklayan NoSQL veritabanıdır. Yapılandırılmamış verilerle çalışmayı kolaylaştırır."
+    }
+  },
+  "notfound": {
+    "description": "Sayfa Bulunamadı: {{ url }}",
+    "button": "Geri Dön"
+  },
+  "projects": {
+    "title": "Projelerim",
+    "description": "Yeteneklerim ve projelerimi sergilemek için React.js ve Tailwind CSS ile oluşturulmuş kişisel bir hakkımda sayfası.",
+    "liveProjects": "Canlı Projeler",
+    "liveProjectsSubtitle": "Aktif olarak kullanımda olan projeler",
+    "statusLive": "Canlı",
+    "statusDeveloping": "Geliştiriliyor",
+    "progress": "İlerleme",
+    "visitProject": "Projeyi Ziyaret Et",
+    "about": {
+      "title": "Kişisel Hakkımda Sayfası",
+      "description": "Yeteneklerim ve projelerimi sergilemek için React.js ve Tailwind CSS ile oluşturulmuş kişisel bir hakkımda sayfası.",
+      "date": "5 Ekim 2024"
+    },
+    "weather": {
+      "title": "Hava Durumu Uygulaması",
+      "description": "OpenWeatherMap API'sini kullanan basit bir hava durumu uygulaması. Kullanıcıların şehir ve konum bazında hava durumu bilgilerini görüntülemelerini sağlar.",
+      "date": "11 Kasım 2024"
+    },
+    "todo": {
+      "title": "Yapılacaklar Listesi Uygulaması",
+      "description": "Basit ve kullanıcı dostu bir yapılacaklar listesi uygulaması. Kullanıcıların görev ekleyip yönetmelerine olanak tanır.",
+      "date": "13 Kasım 2024"
+    },
+    "face_id": {
+      "title": "Duygu Tanıma Uygulaması",
+      "description": "Kullanıcıların yüz ifadelerini analiz ederek duygularını tanıyan bir web uygulaması.",
+      "date": "17 Ocak 2026"
+    },
+    "mu6": {
+      "title": "Müzik Çalma Uygulaması",
+      "description": "Dinlemek istediğiniz müziği oynatabilir, çalma listesi oluşturabilir ve listeleri düzenleyebilirsiniz.",
+      "date": "8 Şubat 2026"
+    }
+  },
+  "developingProjects": {
+    "title": "Geliştiriliyor",
+    "description": "Şu anda üzerinde çalıştığım projeler. Daha fazla bilgi almak için kartlara tıklayın/dokunun.",
+    "chatApp": {
+      "title": "Gerçek Zamanlı Sohbet Uygulaması",
+      "description": "Kullanıcıların gerçek zamanlı olarak mesajlaşmalarını sağlayan bir sohbet uygulaması. WebSocket teknolojisi kullanılarak geliştirilıyor, gelişmeleri bana ulaşarak veya buradaki yapacağım güncellemeleri takip edebilirsiniz.",
+      "date": "2026 Sonu"
+    },
+    "blogApp": {
+      "title": "Kişisel Blog Uygulaması",
+      "description": "Kullanıcıların blog yazıları oluşturup paylaşmalarını sağlayan bir blog uygulaması. Kullanıcı dostu bir arayüz ve zengin metin düzenleme özellikleri ile geliştiriliyor, gelişmeleri bana ulaşarak veya buradaki yapacağım güncellemeleri takip edebilirsiniz.",
+      "date": "Yakında"
+    }
+  }
 }
