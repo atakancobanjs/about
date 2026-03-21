@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 
-import { getLevelColor } from "./constants";
+import { getLevelColor } from "./Constants";
 
 const SkillCard = React.memo(({ skill, onSelect }) => {
   const [hovered, setHovered] = useState(false);

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiX, FiExternalLink } from "react-icons/fi";
 
-import { TOKEN_COLORS, getLevelColor } from "./constants";
+import { TOKEN_COLORS, getLevelColor } from "./Constants";
 
 import { useTranslation } from "react-i18next";
 

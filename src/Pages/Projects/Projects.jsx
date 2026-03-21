@@ -8,7 +8,7 @@ import Footer from "../../Components/Footer/Footer";
 import { FiCode } from "react-icons/fi";
 import { BsRocket } from "react-icons/bs";
 
-import JsonHero from "../../Components/Projects/Jsonhero";
+import JsonHero from "../../Components/Projects/JsonHero";
 import LiveProjectCard from "../../Components/Projects/LiveProjectCard";
 import DevProjectCard from "../../Components/Projects/DevProjectCard";
 import ProjectModal from "../../Components/Projects/ProjectModal";

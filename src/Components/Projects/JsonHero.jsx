@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useReducedMotion } from "framer-motion";
 
-import { TOKEN_COLORS, makeProjectsLines } from "./constants";
+import { TOKEN_COLORS, makeProjectsLines } from "./Constants";
 
 const JsonHero = React.memo(({ liveCount }) => {
   const { t, i18n } = useTranslation();

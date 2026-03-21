@@ -5,7 +5,7 @@ import { FiExternalLink, FiX } from "react-icons/fi";
 import { BsRocket } from "react-icons/bs";
 
 import StackBadge from "./StackBadge";
-import { TOKEN_COLORS } from "./constants";
+import { TOKEN_COLORS } from "./Constants";
 
 const ProjectModal = ({ project, onClose }) => {
   const { t } = useTranslation();
