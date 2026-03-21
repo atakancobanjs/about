@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
-import { TOKEN_COLORS, makeSkillsLines } from "./constants";
+import { TOKEN_COLORS, makeSkillsLines } from "./Constants";
 
 const JsonHero = React.memo(({ expertCount, totalCount }) => {
   const { t, i18n } = useTranslation();
