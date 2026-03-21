@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-	cursor: none !important;
+  cursor: none !important;
 }
 
 /* Link, button ve interaktif elementler */
@@ -12,11 +12,17 @@ button,
 input,
 textarea,
 select {
-	cursor: none !important;
+  cursor: none !important;
 }
 
 /* Hover durumları */
 a:hover,
 button:hover {
-	cursor: none !important;
+  cursor: none !important;
+}
+
+html,
+body,
+#root {
+  background: #000;
 }

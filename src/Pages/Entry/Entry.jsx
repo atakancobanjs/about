@@ -1,268 +1,433 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { TypeAnimation } from "react-type-animation";
 
-const Home = () => {
-	const { t } = useTranslation();
-	const navigate = useNavigate();
+// ── Terminal satırları ────────────────────────────────────────────────────────
+const LINES = [
+  { type: "cmd", text: "npm run dev" },
+  { type: "empty", text: "" },
+  {
+    type: "out",
+    parts: [
+      { c: "#a855f7", t: "  >" },
+      { c: "#ccc", t: " portfolio@1.0.0" },
+      { c: "#89ddff", t: " dev" },
+    ],
+  },
+  {
+    type: "out",
+    parts: [
+      { c: "#a855f7", t: "  >" },
+      { c: "#ccc", t: " vite --host" },
+    ],
+  },
+  { type: "empty", text: "" },
+  {
+    type: "out",
+    parts: [
+      { c: "#89ddff", t: "  VITE" },
+      { c: "#ccc", t: " v5.4.2" },
+      { c: "#546e7a", t: " ready in" },
+      { c: "#f78c6c", t: " 312" },
+      { c: "#546e7a", t: " ms" },
+    ],
+  },
+  { type: "empty", text: "" },
+  {
+    type: "out",
+    parts: [
+      { c: "#546e7a", t: "  ➜  Local:   " },
+      { c: "#89ddff", t: "http://localhost:5173/" },
+    ],
+  },
+  {
+    type: "out",
+    parts: [
+      { c: "#546e7a", t: "  ➜  Network: " },
+      { c: "#89ddff", t: "http://192.168.1.42:5173/" },
+    ],
+  },
+  {
+    type: "out",
+    parts: [
+      { c: "#546e7a", t: "  ➜  press " },
+      { c: "#ccc", t: "h" },
+      { c: "#546e7a", t: " + enter to show help" },
+    ],
+  },
+  { type: "empty", text: "" },
+];
 
-	const [station, setStation] = useState({ text_1: false, text_2: false });
-	const [showWelcome, setShowWelcome] = useState(false);
-	const [particles, setParticles] = useState([]);
+// Her satırın ne zaman gösterileceği (ms)
+const DELAYS = [0, 500, 620, 780, 900, 1020, 1180, 1340, 1500, 1650, 1800];
 
-	// Generate particles
-	useEffect(() => {
-		const newParticles = Array.from({ length: 50 }, (_, i) => ({
-			id: i,
-			x: Math.random() * 100,
-			y: Math.random() * 100,
-			size: Math.random() * 4 + 1,
-			duration: Math.random() * 3 + 2,
-			delay: Math.random() * 2,
-		}));
-		setParticles(newParticles);
-	}, []);
+// Progress bar başlangıcı
+const PROGRESS_START = 2000;
 
-	useEffect(() => {
-		if (station.text_1 && station.text_2) {
-			setShowWelcome(true);
-			setTimeout(() => {
-				navigate("/home");
-			}, 1500);
-		}
-	}, [station, navigate]);
+const TerminalSplash = () => {
+  const { t } = useTranslation();
+  const navigate = useNavigate();
 
-	return (
-		<div className="w-screen h-screen relative overflow-hidden bg-black">
-			{/* Animated Background Blobs */}
-			<motion.div
-				className="w-96 h-96 rounded-full bg-gradient-to-tr from-pink-500 to-violet-500 absolute blur-3xl opacity-20"
-				animate={{
-					x: [-50, 100, -50],
-					y: [-50, 50, -50],
-					scale: [1, 1.2, 1],
-				}}
-				transition={{
-					duration: 8,
-					repeat: Infinity,
-					ease: "easeInOut",
-				}}
-				style={{ bottom: "-10%", left: "-10%" }}
-			/>
+  const [visibleCount, setVisibleCount] = useState(0);
+  const [showProgress, setShowProgress] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [exiting, setExiting] = useState(false);
 
-			<motion.div
-				className="w-96 h-96 rounded-full bg-gradient-to-tr from-violet-500 to-blue-500 absolute blur-3xl opacity-20"
-				animate={{
-					x: [0, -100, 0],
-					y: [0, 100, 0],
-					scale: [1.2, 1, 1.2],
-				}}
-				transition={{
-					duration: 10,
-					repeat: Infinity,
-					ease: "easeInOut",
-				}}
-				style={{ top: "-10%", right: "-10%" }}
-			/>
+  // Partiküller
+  const particles = useMemo(
+    () =>
+      Array.from({ length: 30 }, (_, i) => ({
+        id: i,
+        x: Math.random() * 100,
+        y: Math.random() * 100,
+        size: Math.random() * 2.5 + 1,
+        duration: Math.random() * 3 + 2,
+        delay: Math.random() * 2,
+      })),
+    [],
+  );
 
-			<motion.div
-				className="w-72 h-72 rounded-full bg-gradient-to-tr from-purple-500 to-pink-500 absolute blur-3xl opacity-15"
-				animate={{
-					x: [50, -50, 50],
-					y: [50, -50, 50],
-					scale: [1, 1.3, 1],
-				}}
-				transition={{
-					duration: 7,
-					repeat: Infinity,
-					ease: "easeInOut",
-				}}
-				style={{ top: "50%", left: "50%" }}
-			/>
+  // Satırları sırayla göster
+  useEffect(() => {
+    const timers = DELAYS.map((d, i) =>
+      setTimeout(() => setVisibleCount((c) => Math.max(c, i + 1)), d),
+    );
+    return () => timers.forEach(clearTimeout);
+  }, []);
 
-			{/* Floating Particles */}
-			{particles.map((particle) => (
-				<motion.div
-					key={particle.id}
-					className="absolute rounded-full bg-gradient-to-r from-pink-500 to-violet-500"
-					style={{
-						left: `${particle.x}%`,
-						top: `${particle.y}%`,
-						width: particle.size,
-						height: particle.size,
-					}}
-					animate={{
-						y: [0, -30, 0],
-						opacity: [0.2, 0.8, 0.2],
-					}}
-					transition={{
-						duration: particle.duration,
-						repeat: Infinity,
-						delay: particle.delay,
-						ease: "easeInOut",
-					}}
-				/>
-			))}
+  // Progress bar
+  useEffect(() => {
+    const startTimer = setTimeout(() => {
+      setShowProgress(true);
+      let p = 0;
+      const iv = setInterval(() => {
+        p += 2;
+        setProgress(p);
+        if (p >= 100) {
+          clearInterval(iv);
+          setExiting(true);
+          setTimeout(() => navigate("/home"), 500);
+        }
+      }, 22);
+      return () => clearInterval(iv);
+    }, PROGRESS_START);
+    return () => clearTimeout(startTimer);
+  }, [navigate]);
 
-			{/* Noise Texture */}
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				xmlnsXlink="http://www.w3.org/1999/xlink"
-				className="absolute top-0 left-0 w-full h-full pointer-events-none"
-			>
-				<filter id="n" x="0" y="0">
-					<feTurbulence type="fractalNoise" baseFrequency="0.5" stitchTiles="stitch" />
-				</filter>
-				<rect width="100%" height="100%" filter="url(#n)" opacity="0.08" />
-			</svg>
+  return (
+    <motion.div
+      animate={{ opacity: exiting ? 0 : 1, scale: exiting ? 1.04 : 1 }}
+      transition={{ duration: 0.5 }}
+      style={{
+        position: "fixed",
+        inset: 0,
+        background: "#000",
+        overflow: "hidden",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "16px",
+      }}
+    >
+      {/* Gradient blob'lar */}
+      <motion.div
+        style={{
+          position: "absolute",
+          width: 500,
+          height: 500,
+          borderRadius: "50%",
+          background:
+            "radial-gradient(circle, rgba(168,85,247,0.12), transparent 70%)",
+          left: "-12%",
+          bottom: "-12%",
+          pointerEvents: "none",
+        }}
+        animate={{ x: [-20, 40, -20], y: [-20, 30, -20], scale: [1, 1.15, 1] }}
+        transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        style={{
+          position: "absolute",
+          width: 400,
+          height: 400,
+          borderRadius: "50%",
+          background:
+            "radial-gradient(circle, rgba(99,102,241,0.1), transparent 70%)",
+          right: "-10%",
+          top: "-10%",
+          pointerEvents: "none",
+        }}
+        animate={{ x: [0, -30, 0], y: [0, 40, 0] }}
+        transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
+      />
 
-			{/* Main Content */}
-			<div className="h-full relative flex flex-col justify-center items-center gap-8 px-4">
-				{/* Animated Text */}
-				<motion.div className="relative z-20" initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.5 }}>
-					{/* Glowing Background Text */}
-					<div className="absolute inset-0 blur-2xl">
-						<TypeAnimation
-							sequence={[t("hi"), 1000, () => setStation((v) => ({ ...v, text_2: true }))]}
-							wrapper="span"
-							cursor={false}
-							className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 text-4xl sm:text-6xl md:text-8xl text-nowrap"
-						/>
-					</div>
+      {/* Partiküller */}
+      {particles.map((p) => (
+        <motion.div
+          key={p.id}
+          style={{
+            position: "absolute",
+            left: `${p.x}%`,
+            top: `${p.y}%`,
+            width: p.size,
+            height: p.size,
+            borderRadius: "50%",
+            background: "linear-gradient(135deg, #ec4899, #a855f7)",
+            pointerEvents: "none",
+          }}
+          animate={{ y: [0, -24, 0], opacity: [0.1, 0.5, 0.1] }}
+          transition={{
+            duration: p.duration,
+            repeat: Infinity,
+            delay: p.delay,
+            ease: "easeInOut",
+          }}
+        />
+      ))}
 
-					{/* Main Text with Gradient */}
-					<TypeAnimation
-						sequence={[t("hi"), 100, () => setStation((v) => ({ ...v, text_1: true }))]}
-						wrapper="span"
-						cursor={true}
-						repeat={1}
-						className="relative font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-violet-500 to-purple-500 text-4xl sm:text-6xl md:text-8xl lg:text-9xl text-nowrap"
-						style={{
-							textShadow: "0 0 80px rgba(236, 72, 153, 0.5)",
-						}}
-					/>
-				</motion.div>
+      {/* Noise */}
+      <svg
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          pointerEvents: "none",
+        }}
+      >
+        <filter id="noise">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.65"
+            stitchTiles="stitch"
+          />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#noise)" opacity="0.04" />
+      </svg>
 
-				{/* Subtitle Animation */}
-				<AnimatePresence>
-					{station.text_1 && (
-						<motion.div
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							exit={{ opacity: 0, y: -20 }}
-							transition={{ duration: 0.8 }}
-							className="relative z-20"
-						>
-							<p className="text-gray-400 text-lg sm:text-xl md:text-2xl text-center font-light">{t("home.subtitle")}</p>
-						</motion.div>
-					)}
-				</AnimatePresence>
+      {/* Terminal penceresi */}
+      <motion.div
+        initial={{ opacity: 0, y: 24, scale: 0.97 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        style={{
+          background: "#0d0d14",
+          border: "1px solid #1e1e30",
+          borderRadius: "14px",
+          overflow: "hidden",
+          width: "100%",
+          maxWidth: "600px",
+          boxShadow: "0 0 60px rgba(168,85,247,0.1), 0 0 0 1px #1e1e30",
+        }}
+      >
+        {/* Title bar */}
+        <div
+          style={{
+            background: "#13131f",
+            padding: "11px 18px",
+            display: "flex",
+            alignItems: "center",
+            gap: "7px",
+            borderBottom: "1px solid #1e1e30",
+          }}
+        >
+          {["#ff5f57", "#febc2e", "#28c840"].map((c) => (
+            <span
+              key={c}
+              style={{
+                width: 12,
+                height: 12,
+                borderRadius: "50%",
+                background: c,
+                display: "inline-block",
+                flexShrink: 0,
+              }}
+            />
+          ))}
+          <span
+            style={{
+              fontSize: "12px",
+              color: "#555577",
+              marginLeft: "10px",
+              fontFamily: "monospace",
+            }}
+          >
+            ~/portfolio — zsh
+          </span>
+          {/* Sağda canlı gösterge */}
+          <div
+            style={{
+              marginLeft: "auto",
+              display: "flex",
+              alignItems: "center",
+              gap: 5,
+            }}
+          >
+            <span
+              style={{
+                width: 6,
+                height: 6,
+                borderRadius: "50%",
+                background: "#28c840",
+                display: "inline-block",
+                animation: "pulse 2s ease-in-out infinite",
+              }}
+            />
+            <span
+              style={{
+                fontSize: "10px",
+                color: "#28c840",
+                fontFamily: "monospace",
+              }}
+            >
+              running
+            </span>
+          </div>
+        </div>
 
-				{/* Loading Progress */}
-				<AnimatePresence>
-					{station.text_1 && !showWelcome && (
-						<motion.div
-							initial={{ opacity: 0, scale: 0.8 }}
-							animate={{ opacity: 1, scale: 1 }}
-							exit={{ opacity: 0, scale: 0.8 }}
-							className="relative z-20 w-64 sm:w-80"
-						>
-							<div className="h-1 bg-gray-800 rounded-full overflow-hidden">
-								<motion.div
-									className="h-full bg-gradient-to-r from-pink-500 via-violet-500 to-purple-500"
-									initial={{ width: "0%" }}
-									animate={{ width: "100%" }}
-									transition={{ duration: 1.5, ease: "easeInOut" }}
-								/>
-							</div>
-							<motion.p
-								className="text-center text-gray-500 text-sm mt-3"
-								animate={{ opacity: [0.5, 1, 0.5] }}
-								transition={{ duration: 1.5, repeat: Infinity }}
-							>
-								{t("home.loading")}
-							</motion.p>
-						</motion.div>
-					)}
-				</AnimatePresence>
+        {/* Terminal gövdesi */}
+        <div
+          style={{
+            padding: "18px 22px 22px",
+            fontFamily:
+              "'Fira Code','Cascadia Code','JetBrains Mono','Courier New',monospace",
+            fontSize: "clamp(11px, 1.8vw, 13px)",
+            lineHeight: 1.8,
+          }}
+        >
+          {LINES.map((line, i) => (
+            <div
+              key={i}
+              style={{
+                display: "flex",
+                gap: 8,
+                minHeight: "22px",
+                opacity: i < visibleCount ? 1 : 0,
+                transform:
+                  i < visibleCount ? "translateY(0)" : "translateY(4px)",
+                transition: "opacity 0.15s ease, transform 0.15s ease",
+              }}
+            >
+              {line.type === "cmd" && (
+                <>
+                  <span style={{ color: "#546e7a", flexShrink: 0 }}>
+                    atakan@dev:~$
+                  </span>
+                  <span style={{ color: "#c3e88d" }}>{line.text}</span>
+                </>
+              )}
+              {line.type === "empty" && <span>&nbsp;</span>}
+              {line.type === "out" && (
+                <span>
+                  {line.parts.map((part, j) => (
+                    <span key={j} style={{ color: part.c }}>
+                      {part.t}
+                    </span>
+                  ))}
+                </span>
+              )}
+            </div>
+          ))}
 
-				{/* Welcome Message */}
-				<AnimatePresence>
-					{showWelcome && (
-						<motion.div
-							initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
-							animate={{ opacity: 1, scale: 1, rotate: 0 }}
-							exit={{ opacity: 0, scale: 1.5 }}
-							transition={{ type: "spring", stiffness: 200, damping: 20 }}
-							className="absolute inset-0 flex items-center justify-center z-30"
-						>
-							<div className="relative">
-								{/* Glow Effect */}
-								<div className="absolute inset-0 blur-3xl bg-gradient-to-r from-pink-500 via-violet-500 to-purple-500 opacity-50 animate-pulse"></div>
+          {/* Progress + success satırı */}
+          <AnimatePresence>
+            {showProgress && (
+              <motion.div
+                initial={{ opacity: 0, y: 4 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                {/* Başarı mesajı */}
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 8,
+                    marginBottom: 8,
+                  }}
+                >
+                  <span style={{ color: "#28c840" }}>✓</span>
+                  <span style={{ color: "#c3e88d" }}>opening portfolio</span>
+                  <span style={{ color: "#546e7a", fontSize: "11px" }}>
+                    ({Math.round(progress)}%)
+                  </span>
+                </div>
 
-								{/* Welcome Text */}
-								<motion.div
-									animate={{
-										scale: [1, 1.1, 1],
-									}}
-									transition={{
-										duration: 0.5,
-										repeat: 2,
-									}}
-									className="relative px-8 py-4 rounded-2xl border-2 border-violet-500 bg-black/50 backdrop-blur-xl"
-								>
-									<p className="text-2xl sm:text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-violet-400 to-purple-400">
-										{t("home.welcome")} ✨
-									</p>
-								</motion.div>
-							</div>
-						</motion.div>
-					)}
-				</AnimatePresence>
+                {/* Progress bar */}
+                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                  <span
+                    style={{
+                      color: "#546e7a",
+                      fontSize: "11px",
+                      flexShrink: 0,
+                    }}
+                  >
+                    loading
+                  </span>
+                  <div
+                    style={{
+                      flex: 1,
+                      maxWidth: 220,
+                      height: 3,
+                      background: "#1e1e30",
+                      borderRadius: 999,
+                      overflow: "hidden",
+                    }}
+                  >
+                    <div
+                      style={{
+                        height: "100%",
+                        width: `${progress}%`,
+                        background:
+                          "linear-gradient(90deg, #ec4899, #a855f7, #6366f1)",
+                        borderRadius: 999,
+                        transition: "width 0.02s linear",
+                      }}
+                    />
+                  </div>
+                  <span
+                    style={{
+                      color: "#546e7a",
+                      fontSize: "11px",
+                      flexShrink: 0,
+                    }}
+                  >
+                    {progress < 100
+                      ? "▓".repeat(Math.floor(progress / 10)) +
+                        "░".repeat(10 - Math.floor(progress / 10))
+                      : "▓▓▓▓▓▓▓▓▓▓"}
+                  </span>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
-				{/* Animated Rings */}
-				<motion.div
-					className="absolute inset-0 flex items-center justify-center pointer-events-none"
-					initial={{ opacity: 0 }}
-					animate={{ opacity: station.text_1 ? 0.3 : 0 }}
-				>
-					{[1, 2, 3].map((ring) => (
-						<motion.div
-							key={ring}
-							className="absolute rounded-full border border-violet-500/20"
-							style={{
-								width: `${ring * 200}px`,
-								height: `${ring * 200}px`,
-							}}
-							animate={{
-								scale: [1, 1.2, 1],
-								opacity: [0.3, 0.1, 0.3],
-							}}
-							transition={{
-								duration: 3,
-								repeat: Infinity,
-								delay: ring * 0.3,
-							}}
-						/>
-					))}
-				</motion.div>
-			</div>
+          {/* Cursor */}
+          {!showProgress && visibleCount >= LINES.length && (
+            <div style={{ marginTop: 2 }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  width: 7,
+                  height: 14,
+                  background: "#a855f7",
+                  animation: "blink 1s step-end infinite",
+                  borderRadius: "1px",
+                  verticalAlign: "middle",
+                }}
+              />
+            </div>
+          )}
+        </div>
+      </motion.div>
 
-			<style jsx>{`
-				@keyframes float {
-					0%,
-					100% {
-						transform: translateY(0px);
-					}
-					50% {
-						transform: translateY(-20px);
-					}
-				}
-			`}</style>
-		</div>
-	);
+      <style>{`
+        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+        @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.3)} }
+      `}</style>
+    </motion.div>
+  );
 };
 
-export default Home;
+export default TerminalSplash;
