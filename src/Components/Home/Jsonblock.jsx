@@ -2,7 +2,7 @@ import React, { useMemo, useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
-import { TOKEN_COLORS, makeJsonLines } from "./jsonLines";
+import { TOKEN_COLORS, makeJsonLines } from "./JsonLines";
 import { getAge } from "./Constants";
 
 const JsonLine = ({ tokens, lineNo, visible }) => {
