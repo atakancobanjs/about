@@ -3,7 +3,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 import { TOKEN_COLORS, makeJsonLines } from "./jsonLines";
-import { getAge } from "./constants";
+import { getAge } from "./Constants";
 
 const JsonLine = ({ tokens, lineNo, visible }) => {
   const firstVal = tokens[0]?.v ?? "";
