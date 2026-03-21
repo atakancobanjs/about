@@ -8,7 +8,7 @@ import StatCard, {
   IconGithub,
   IconStack,
 } from "./StatCard";
-import { PHOTOS, ICON_BG } from "./constants";
+import { PHOTOS, ICON_BG } from "./Constants";
 
 const CORNER_THICKNESS = 2.5;
 const CORNER_RADIUS = 4;
