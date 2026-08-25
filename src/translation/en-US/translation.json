@@ -174,7 +174,14 @@
     "chatApp": {
       "title": "Real-Time Chat Application",
       "description": "A chat application that enables users to message in real-time. Being developed using WebSocket technology, you can follow the progress by contacting me or following updates here.",
-      "date": "End of 2026"
+      "date": "End of 2026",
+      "completed": "Completed",
+      "developing": "In Development",
+      "platforms": {
+        "web": "Web",
+        "desktop": "Desktop",
+        "mobile": "Mobile"
+      }
     },
     "blogApp": {
       "title": "Personal Blog Application",

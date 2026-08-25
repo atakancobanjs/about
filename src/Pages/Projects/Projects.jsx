@@ -11,6 +11,7 @@ import { BsRocket } from "react-icons/bs";
 import JsonHero from "../../Components/Projects/JsonHero";
 import LiveProjectCard from "../../Components/Projects/LiveProjectCard";
 import DevProjectCard from "../../Components/Projects/DevProjectCard";
+import ChatAppProjectCard from "../../Components/Projects/ChatAppProjectCard";
 import ProjectModal from "../../Components/Projects/ProjectModal";
 import { useProjectsData } from "../../Components/Projects/projectsData";
 
@@ -83,9 +84,17 @@ const Projects = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              {developingProjects.map((project, index) => (
-                <DevProjectCard key={index} project={project} tFunc={t} />
-              ))}
+              {developingProjects.map((project, index) =>
+                project.id === "chatApp" ? (
+                  <ChatAppProjectCard
+                    key={index}
+                    project={project}
+                    tFunc={t}
+                  />
+                ) : (
+                  <DevProjectCard key={index} project={project} tFunc={t} />
+                ),
+              )}
             </div>
           </div>
         )}

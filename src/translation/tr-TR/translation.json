@@ -174,7 +174,14 @@
     "chatApp": {
       "title": "Gerçek Zamanlı Sohbet Uygulaması",
       "description": "Kullanıcıların gerçek zamanlı olarak mesajlaşmalarını sağlayan bir sohbet uygulaması. WebSocket teknolojisi kullanılarak geliştirilıyor, gelişmeleri bana ulaşarak veya buradaki yapacağım güncellemeleri takip edebilirsiniz.",
-      "date": "2026 Sonu"
+      "date": "2026 Sonu",
+      "completed": "Tamamlandı",
+      "developing": "Geliştiriliyor",
+      "platforms": {
+        "web": "Web",
+        "desktop": "Masaüstü",
+        "mobile": "Mobil"
+      }
     },
     "blogApp": {
       "title": "Kişisel Blog Uygulaması",

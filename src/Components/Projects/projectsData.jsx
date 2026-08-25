@@ -67,6 +67,7 @@ export const useProjectsData = () => {
   const developingProjects = useMemo(
     () => [
       {
+        id: "chatApp",
         title: t("developingProjects.chatApp.title"),
         description: t("developingProjects.chatApp.description"),
         date: t("developingProjects.chatApp.date"),
@@ -74,6 +75,11 @@ export const useProjectsData = () => {
         icon: <BsCodeSlash size={28} />,
         progress: 75,
         stack: ["React", "Node.js", "MongoDB"],
+        platforms: [
+          { key: "web", status: "completed" },
+          { key: "desktop", status: "completed" },
+          { key: "mobile", status: "developing" },
+        ],
       },
       {
         title: t("developingProjects.blogApp.title"),
